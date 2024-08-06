@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://index.docker.io/v1/", registryCredential) {
-                        docker.image('simple_flask:latest').push()
+                        docker.image('janaessam/simple_flask:latest').push()
                     }
                 }
             }
