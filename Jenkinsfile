@@ -13,7 +13,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    docker.build("simple_flask:latest")
+                    docker.build("janaessam/simple_flask:latest")
                 }
             }
         }
