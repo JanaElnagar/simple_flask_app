@@ -15,7 +15,7 @@ pipeline {
                 script {
                    // docker.build("janaessam/simple_flask")
                     image = docker.build("janaessam/simple_flask")
-	            image.tag("janaessam/simple_flask:0.2")
+	            image.tag(0.2)
                 }
             }
         }
