@@ -20,7 +20,7 @@ pipeline {
         stage('Security scans using Trivy') {
             steps {
                 script {
-                    sh 'trivy image simple_flask:latest'
+                    sh 'trivy image simple_flask:0.2'
                 }
             }
         }
@@ -33,5 +33,6 @@ pipeline {
                 }
             }
         }
+        
     }
 }
