@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, from version 0.3! Color is $COLOR'
+    return 'Hello, from version 0.3! Color is ${COLOR}'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

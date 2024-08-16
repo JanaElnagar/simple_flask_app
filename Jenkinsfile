@@ -15,7 +15,7 @@ pipeline {
                 script {
                     docker.build("janaessam/simple_flask:latest")
                     //image = docker.build("janaessam/simple_flask:latest")
-	            sh "docker tag janaessam/simple_flask:latest janaessam/simple_flask:0.3"
+	            sh "docker tag janaessam/simple_flask:latest janaessam/simple_flask:0.4"
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://index.docker.io/v1/", registryCredential) {
-                        docker.image('janaessam/simple_flask:0.3').push()
+                        docker.image('janaessam/simple_flask:0.4').push()
                     }
                 }
             }
