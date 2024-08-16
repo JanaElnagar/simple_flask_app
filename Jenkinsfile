@@ -13,7 +13,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    docker.build("janaessam/simple_flask:latest")
+                    docker.build("janaessam/simple_flask:0.2")
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://index.docker.io/v1/", registryCredential) {
-                        docker.image('janaessam/simple_flask:latest').push()
+                        docker.image('janaessam/simple_flask:0.2').push()
                     }
                 }
             }
