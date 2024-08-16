@@ -13,7 +13,9 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    docker.build("janaessam/simple_flask:0.2")
+                   // docker.build("janaessam/simple_flask")
+                    image = docker.build("janaessam/simple_flask")
+	            image.tag("janaessam/simple_flask:0.2")
                 }
             }
         }
