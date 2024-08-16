@@ -19,13 +19,13 @@ pipeline {
                 }
             }
         }
-        stage('Security scans using Trivy') {
-            steps {
-                script {
+        //stage('Security scans using Trivy') {
+         //   steps {
+           //     script {
                   //  sh 'trivy image janaessam/simple_flask:0.2'
-                }
-            }
-        }
+             //   }
+           // }
+       // }
         stage('Upload image to Dockerhub') {
             steps {
                 script {
