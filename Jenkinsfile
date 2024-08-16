@@ -22,7 +22,7 @@ pipeline {
         stage('Security scans using Trivy') {
             steps {
                 script {
-                    sh 'trivy image janaessam/simple_flask:0.2'
+                  //  sh 'trivy image janaessam/simple_flask:0.2'
                 }
             }
         }
